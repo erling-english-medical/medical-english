@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول - Medical English</title>
+  <style>
+    body {
+      background-color: #1e90ff; /* أزرق */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .login-box {
+      background-color: white;
+      color: black;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 95%;
+      padding: 10px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #1c86ee;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" id="username" placeholder="سنة البكالوريا + رقم بطاقة الطالب">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <button onclick="login()">تسجيل الدخول</button>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if(user === "" || pass === "") {
+        alert("الرجاء تعبئة جميع الحقول");
+        return;
+      }
+
+      // أي تحقق بسيط ممكن إضافته هنا، أو نتجاوز للتحويل مباشرة
+      window.location.href = "files.html"; // سينتقل لصفحة الملفات
+    }
+  </script>
+</body>
+</html>
